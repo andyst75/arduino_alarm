@@ -53,7 +53,7 @@ void GameSnake::Init() {
   //позиция головы змейки в массиве
   snake_head = 0;
 
-  //отрисвовываем первоначальную змейку
+  //отрисовываем первоначальную змейку
   for (uint8_t i = 0; i < snake_l; i++) snake_paint(i, 0xF300);
 
   //сразу заполняем массив бонусов *просроченными* бонусами, чтобы сработал механизм первоначального заполнения
@@ -112,10 +112,8 @@ void GameSnake::paintBlock(uint8_t x, uint8_t y, uint16_t color) {
 */
 void GameSnake::insertBonus(uint8_t i) {
   uint16_t color;
-  //do {
   bonus[i].x = random(0, 16);
   bonus[i].y = random(0, 16);
-  //} while (collision(bonus[i].x, bonus[i].y) == 0);
   bonus[i].tm = millis();
   bonus[i].type = random(0, 100);
   if (bonus[i].type < 60) {
