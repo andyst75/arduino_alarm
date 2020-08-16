@@ -18,3 +18,4 @@ Arduino Alarm clock project
   <img src="https://github.com/andyst75/arduino_alarm/blob/master/screen2.jpg?raw=true" alt="Arduino Alarm clock screen2"/>
 </p>
 
+Для борьбы с мерцанием экрана при обновлении информации внесены изменения в функцию вывода символов: MyTFT::reDrawChar. Теперь обновляются только непосредственно измененные пиксели.
